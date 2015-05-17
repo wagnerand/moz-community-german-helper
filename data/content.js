@@ -22,7 +22,7 @@ self.port.on("setRejectionMessageAll", function(text) {
     }
 });
 
-self.port.on("overview-loaded", function() {
+self.port.on("overview-loaded", function(reloadInterval) {
     console.log("overview-loaded IN");
     let headline = document.querySelector(".main-content > h2:nth-child(1)");
     if (headline) {
@@ -36,6 +36,6 @@ self.port.on("overview-loaded", function() {
         setInterval(function() {
             console.log("reloadTimeout CALL");
             self.port.emit("reloadTimeout");
-        }, 10000);
+        }, reloadInterval * 60000);
     }
 });
