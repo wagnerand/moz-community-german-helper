@@ -1,6 +1,6 @@
 Danke, dass Sie sich mit Ihrem Anliegen an Mozilla wenden.
 
-Diese Mailingliste dient der Kommunikation der deutschsprachigen Mozilla-Community.
+Diese Mailingliste dient der internen Kommunikation der deutschsprachigen Mozilla-Community.
 
 Wir empfehlen Ihnen, auf unserer (Mozilla)-Hilfe-Website
 
