@@ -32,6 +32,7 @@ self.port.on("overview-loaded", function(reloadInterval) {
             for (icon of favIcons) {
                 icon.href = "/icons/alert.red.png";
             }
+            self.port.emit("send-notification");
         }
         setInterval(function() {
             console.log("reloadTimeout CALL");

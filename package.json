@@ -17,5 +17,10 @@
         "type": "bool",
         "value": false,
         "title": "Reload even if it's the active tab?"
+    }, {
+        "name": "sendNotification",
+        "type": "bool",
+        "value": true,
+        "title": "Notify, if there are emails to be moderated?"
     }]
 }
