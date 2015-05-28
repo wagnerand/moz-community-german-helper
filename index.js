@@ -40,11 +40,8 @@ pageMod.PageMod({
     attachTo: ["existing", "top"],
     contentScriptFile: self.data.url("content.js"),
     onAttach: function(worker) {
-        console.log("onAttach IN");
         worker.port.on("reloadTimeout", function() {
-            console.log("reloadTimeout IN");
             if ((prefs.prefs.reloadIfActiveTab) || (tabs.activeTab.url !== worker.tab.url)) {
-                console.log("reloading...");
                 worker.tab.url = "https://lists.mozilla.org/admindb/community-german";
             }
         });
@@ -60,7 +57,6 @@ pageMod.PageMod({
                 });
             }
         })
-        console.log("overview-loaded CALL");
         worker.port.emit("overview-loaded", prefs.prefs.reloadInterval);
     }
 });

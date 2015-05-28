@@ -23,11 +23,9 @@ self.port.on("setRejectionMessageAll", function(text) {
 });
 
 self.port.on("overview-loaded", function(reloadInterval) {
-    console.log("overview-loaded IN");
     let headline = document.querySelector(".main-content > h2:nth-child(1)");
     if (headline) {
         if (headline.textContent.indexOf("community-german") > 0) {
-            console.log("modifying favicon");
             let favIcons = document.querySelectorAll("head > link[rel='shortcut icon']")
             for (icon of favIcons) {
                 icon.href = "/icons/alert.red.png";
@@ -35,7 +33,6 @@ self.port.on("overview-loaded", function(reloadInterval) {
             self.port.emit("send-notification");
         }
         setInterval(function() {
-            console.log("reloadTimeout CALL");
             self.port.emit("reloadTimeout");
         }, reloadInterval * 60000);
     }
