@@ -6,6 +6,9 @@
     "author": "Andreas Wagner",
     "license": "MPL 2.0",
     "version": "1.0.0",
+    "permissions": {
+        "multiprocess": true
+    },
     "preferences-branch": "cg-ml-helper",
     "preferences": [{
         "name": "reloadInterval",
